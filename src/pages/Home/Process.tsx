@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import "./Process.css";
 import BotonProcess from "../../components/BotonProcess/BotonProcess";
 
-
 const processSteps = [
     {
-        img: "/public/process/process1.png",
+        img: "/process/process1.png", // Asegúrate de que las rutas sean correctas
         title: "Project Consultation & Planning",
         description: (
             <>
@@ -20,7 +20,7 @@ const processSteps = [
         ),
     },
     {
-        img: "/public/process/process2.png",
+        img: "/process/process2.png", // Asegúrate de que las rutas sean correctas
         title: "Design & Material Selection",
         description: (
             <>
@@ -34,7 +34,7 @@ const processSteps = [
         ),
     },
     {
-        img: "/public/process/process3.png",
+        img: "/process/process3.png", // Asegúrate de que las rutas sean correctas
         title: "Construction & Installation",
         description: (
             <>
@@ -48,10 +48,10 @@ const processSteps = [
         ),
     },
     {
-        img: "/public/process/process4.png",
+        img: "/process/process4.png", // Asegúrate de que las rutas sean correctas
         title: "Final Walkthrough & Quality Check",
         description: (
-            <>
+            <> {/* ESTO ES LO QUE ESTABA MAL: ESTABA </p>, SE CAMBIA A </> */}
                 Once construction is complete, we do a full walkthrough together to
                 make sure every detail meets your expectations.
                 <br />
@@ -63,35 +63,86 @@ const processSteps = [
     },
 ];
 
-const Process: React.FC = () => (
-    <section className="process-section">
-        <div className="process-container">
-            <div className="process-header">
-                <h2 className="process-title">Our Remodeling Process</h2>
-                <p className="process-description">
-                    We follow a clear, client-focused process to ensure every remodeling
-                    project is completed on time, on budget, and with high-quality results.
-                </p>
-            </div>
-            <div className="process-content">
-                {processSteps.map((step, idx) => (
-                    <div className="process-item" key={idx}>
-                        <img
-                            className="process-item-image"
-                            src={step.img}
-                            alt={step.title}
-                        />
-                        <h4 className="process-item-title">{step.title}</h4>
-                        <p className="process-item-description">{step.description}</p>
-                    </div>
-                ))}
-            </div>
-            <div className="process-footer">
-                <img className="process-footer-image" src="" alt="" />
-                <BotonProcess/>
-            </div>
-        </div>
-    </section>
-);
+const Process: React.FC = () => {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true, amount: 0.2 }); // Anima cuando el 20% de la sección es visible
+
+    // Variantes para la sección principal (contenedor padre)
+    const containerVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.7,
+                ease: "easeOut",
+                staggerChildren: 0.1, // Retraso entre los bloques principales (header, content, footer)
+                delayChildren: 0.2
+            }
+        }
+    };
+
+    // Variantes para el encabezado (título y párrafo)
+    const headerVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    };
+
+    // Variantes para cada "process-item"
+    const itemVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    };
+
+    // Variantes para la imagen del pie de página y el botón
+    const footerVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.2 } }
+    };
+
+    return (
+        <motion.section
+            className="process-section"
+            ref={sectionRef}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={containerVariants}
+        >
+            <motion.div className="process-container">
+                <motion.div className="process-header" variants={headerVariants}>
+                    <h2 className="process-title">Our Remodeling Process</h2>
+                    <p className="process-description">
+                        We follow a clear, client-focused process to ensure every remodeling
+                        project is completed on time, on budget, and with high-quality results.
+                    </p>
+                </motion.div>
+                <motion.div className="process-content">
+                    {processSteps.map((step, idx) => (
+                        <motion.div
+                            className="process-item"
+                            key={idx}
+                            variants={itemVariants}
+                        >
+                            <img
+                                className="process-item-image"
+                                src={step.img}
+                                alt={step.title}
+                            />
+                            <h4 className="process-item-title">{step.title}</h4>
+                            <p className="process-item-description">{step.description}</p>
+                        </motion.div>
+                    ))}
+                </motion.div>
+                <motion.div className="process-footer" variants={footerVariants}>
+                    {/* Asegúrate de proporcionar una ruta válida para esta imagen */}
+                    {/* Si usas Next.js o un bundler que copia 'public' a la raíz, la ruta es `/process/...` */}
+                    {/* Si no, podría ser `../public/process/your-footer-image.png` o similar dependiendo de tu estructura */}
+                    {/* <img className="process-footer-image" src="/process/your-footer-image.png" alt="Footer Image" /> */}
+                    <BotonProcess />
+                </motion.div>
+            </motion.div>
+        </motion.section>
+    );
+};
 
 export default Process;

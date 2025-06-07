@@ -1,105 +1,252 @@
+/* Process.css - Solo ajustes necesarios para ANIMACIONES y RESPONSIVE, manteniendo el diseño original */
+
 .process-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden; /* Importante para animaciones de slide-in */
 }
 
 .process-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  width: 1450px;
-  background-color: #f1f2eb;
-  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Mantener el gap original */
+    width: 100%; /* Ajuste para ser responsive al ancho */
+    max-width: 1450px; /* Mantener el max-width original */
+    background-color: #f1f2eb;
+    padding: 20px; /* Mantener el padding original */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el width/height */
 }
 
 .process-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  padding: 30px;
-  width: 75%;
-  /* border: 1px solid #1b1b1b; */
+    display: flex;
+    flex-direction: row; /* Originalmente era row */
+    justify-content: center; /* Originalmente era center */
+    align-items: center;
+    gap: 5px; /* Mantener el gap original */
+    padding: 30px;
+    width: 75%; /* Mantener el width original */
+    /* border: 1px solid #1b1b1b; -> Comentado, asumo que era para debug */
 
-  h2 {
-    font-family: "Host Grotesk", sans-serif;
-    font-size: 4rem;
-    font-weight: bold;
-    line-height: 1;
-  }
+    h2 {
+        font-family: "Host Grotesk", sans-serif;
+        font-size: 4rem; /* Mantener font-size original */
+        font-weight: bold;
+        line-height: 1;
+    }
 
-  p {
-    display: block;
-    font-family: "DM Sans", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    color: #838383;
-    width: 450px;
-  }
+    p {
+        display: block;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 400;
+        font-size: 12px; /* Mantener font-size original */
+        color: #838383;
+        width: 450px; /* Mantener width original */
+    }
 }
 
 .process-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  width: 100%;
-  /* border: 1px solid #1b1b1b; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    flex-wrap: wrap; /* <--- CRUCIAL para el responsive de los ítems */
+    gap: 0; /* Mantener el gap original, si los items tienen flex: 1, gap puede no ser necesario */
 }
 
 .process-item {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  padding-top: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
+    flex: 1; /* Mantener flex: 1 para que los ítems compartan el espacio horizontal */
+    /* El ancho de cada item se calculará automáticamente por flex: 1 en desktop */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* Mantener gap original */
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 300px; /* Mantener altura fija original */
+    /* NO SE AÑADE HOVER EFFECT DE TRANSFORM O BACKGROUND-COLOR AQUÍ PARA MANTENER EL DISEÑO */
 
-  height: 300px;
+    img {
+        width: 80px;
+        height: 80px;
+        filter: grayscale(100%);
+        border-radius: 50%;
+        object-fit: cover; /* Añadido para asegurar que la imagen se vea bien en el círculo */
+    }
 
-  img {
-    width: 80px;
-    height: 80px;
-    filter: grayscale(100%);
-    border-radius: 50%;
-  }
+    h4 {
+        font-family: "Host Grotesk", sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1;
+    }
 
-  h4 {
-    font-family: "Host Grotesk", sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 1;
-  }
-
-  p {
-    display: block;
-    font-family: "DM Sans", sans-serif;
-    font-weight: 400;
-    font-size: 11px;
-    color: #838383;
-    width: 90%;
-  }
+    p {
+        display: block;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        color: #838383;
+        width: 90%;
+    }
 }
 
+/* Bordes originales: Mantenerlos exactamente como los tenías */
 .process-item:nth-child(1) {
-  border-right: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .process-item:nth-child(2) {
-  border-right: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .process-item:nth-child(3) {
     border-right: 1px solid black;
-  }
+}
+
+/* Mantener el process-footer original */
+.process-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Mantener el gap original */
+    padding-top: 40px; /* Mantener el padding original */
+    width: 100%;
+}
+
+.process-footer-image {
+    width: 150px; /* Mantener el width original */
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* --- Media Queries para Responsive (Solo adaptaciones de layout) --- */
+
+/* Tablets - 2 columnas */
+@media (max-width: 1200px) {
+    .process-container {
+        padding: 20px; /* Ajuste un poco el padding general para pantallas más pequeñas */
+        gap: 25px;
+    }
+
+    .process-header {
+        flex-direction: column; /* Apila el título y el párrafo */
+        text-align: center;
+        gap: 15px; /* Ajuste de gap */
+        padding: 0 20px;
+        width: 90%; /* Ocupa más ancho en tablet */
+        /* width: auto; /* Permite que se adapte al contenido */ 
+        max-width: 600px; /* Limita el ancho del header */
+    }
+
+    .process-header h2 {
+        font-size: 3rem; /* Ajusta el tamaño de fuente */
+        width: 100%;
+    }
+
+    .process-header p {
+        font-size: 13px; /* Ajusta el tamaño de fuente */
+        width: 100%;
+    }
+
+    .process-content {
+        justify-content: center;
+        gap: 20px; /* Añade un gap entre los ítems cuando se envuelven */
+        padding: 20px;
+    }
+
+    .process-item {
+        flex: 0 0 calc(50% - 10px); /* Para 2 columnas con gap de 20px: (100% - 1*20px)/2 = 50% - 10px */
+        max-width: 450px; /* Limita el ancho máximo para items de 2 columnas */
+        height: auto; /* Permitir que la altura se ajuste al contenido en responsive */
+        padding: 20px; /* Ajuste de padding */
+    }
+
+    /* Bordes para 2 columnas: */
+    .process-item:nth-child(2n) { /* El segundo, cuarto, etc. item no tiene borde derecho */
+        border-right: none;
+    }
+    .process-item:nth-child(2n-1) { /* El primero, tercero, etc. item tiene borde derecho */
+        border-right: 1px solid black;
+    }
+    .process-item:last-child { /* Asegura que el último item no tenga borde derecho */
+        border-right: none;
+    }
+}
+
+/* Móviles - 1 columna */
+@media (max-width: 768px) {
+    .process-section {
+        padding: 15px;
+    }
+
+    .process-container {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .process-header {
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .process-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .process-header p {
+        font-size: 11px;
+    }
+
+    .process-content {
+        flex-direction: column; /* Apila los ítems verticalmente */
+        align-items: center;
+        gap: 15px; /* Gap entre ítems apilados */
+        padding: 0 10px;
+    }
+
+    .process-item {
+        flex: 0 0 100%; /* Ocupa todo el ancho disponible */
+        max-width: 400px; /* Limita el ancho máximo en móvil */
+        height: auto; /* Asegura que la altura se ajuste */
+        padding: 15px; /* Ajuste de padding */
+        border-right: none !important; /* Elimina todos los bordes derechos en 1 columna */
+        border-bottom: 1px solid black; /* Añade un borde inferior para separar */
+    }
+    .process-item:last-child {
+        border-bottom: none; /* El último item no tiene borde inferior */
+    }
+
+    .process-item img {
+        width: 70px; /* Ajusta tamaño de imagen */
+        height: 70px;
+    }
+
+    .process-item h4 {
+        font-size: 0.95rem; /* Ajusta tamaño de título */
+    }
+
+    .process-item p {
+        font-size: 10px; /* Ajusta tamaño de párrafo */
+    }
+
+    .process-footer {
+        padding-top: 25px;
+        gap: 25px;
+    }
+
+    .process-footer-image {
+        width: 100px;
+    }
+}
