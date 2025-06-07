@@ -13,171 +13,319 @@
     transform: translateY(0);
   }
 }
-
 /* Section Styles */
 .welcome {
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Añadimos padding general para evitar que el contenido toque los bordes en móviles */
+    
 }
 
 /* Main Section Layout */
 .main-section {
-  display: flex;
-  width: 1450px;
-  gap: 5px;
+    display: flex;
+    /* Cambiamos a max-width y usamos porcentajes para flexibilidad */
+    width: 100%; /* Ocupa el 100% del contenedor padre */
+    max-width: 1450px; /* Sigue teniendo un máximo en pantallas grandes */
+    gap: 5px;
+    flex-wrap: wrap; /* Permitimos que los elementos se envuelvan en pantallas pequeñas */
 }
 
 /* Left Section: Welcome1 (50%) */
 .image-text-container {
-  flex: 1;
-  position: relative;
-  height: 700px;
+    flex: 1; /* Permite que ocupe la mitad del espacio disponible en desktop */
+    min-width: 400px; /* Evita que se encoja demasiado en desktop/tablet */
+    position: relative;
+    height: 700px; /* Mantenemos altura fija para desktop */
 }
 
 .image-overlay {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-
-  /* Animación */
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.2s;
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.2s;
 }
 
 .text-container {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  padding: 3rem;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 3rem;
 }
 
 .text-container h1 {
-  font-family: "Host Grotesk", sans-serif;
-  font-size: 6rem;
-  font-weight: bold;
-  line-height: 1;
-
-  /* Animación */
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 1s;
+    font-family: "Host Grotesk", sans-serif;
+    font-size: 6rem; /* Usaremos media queries para ajustar este tamaño */
+    font-weight: bold;
+    line-height: 1;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .text-container p {
-  font-size: 1.25rem;
-
-  /* Animación */
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 1.4s;
+    font-size: 1.25rem; /* Usaremos media queries para ajustar este tamaño */
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1.4s;
 }
 
 /* Right Section: Welcome2 and Welcome3 (50%) */
 .right-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+    flex: 1; /* Ocupa la otra mitad en desktop */
+    min-width: 400px; /* Evita que se encoja demasiado */
+    display: flex;
+    flex-direction: column;
 }
 
 .right-images {
-  flex: 2;
-  display: flex;
-  gap: 5px;
-  height: 100%;
+    flex: 2; /* Ocupa 2/3 de la altura disponible en el right-container */
+    display: flex;
+    gap: 5px;
+    height: 100%;
 }
 
 .image {
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-
-  /* Animación */
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.4s;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.4s;
 }
 
 .description {
-  flex: 1;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
+    flex: 1; /* Ocupa 1/3 de la altura disponible en el right-container */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: start; /* Centrar el texto en móviles */
 }
 
 .description p {
-  font-family: "DM Sans", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
 }
 
 /* Buttons Section */
 .button-section {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
+    width: 100%;
+    max-width: 1450px; /* Ajustamos el max-width para que coincida con main-section */
+    margin-top: 5px; /* Espacio entre main-section y button-section */
 }
 
 .button-item {
-  text-align: center;
-  background-color: #000;
-  border: 1px solid #383838;
-  transition: background-color 0.3s;
-  padding: 25px;
+    text-align: center;
+    background-color: #000;
+    border: 1px solid #383838;
+    transition: background-color 0.3s;
+    padding: 25px;
 }
 
-/* Aplicamos el estilo normal al enlace */
 .button-item a {
-  text-decoration: none;
-  color: #fff;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.15em solid transparent;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid transparent;
 }
 
-/* Efecto de escritura cuando se activa */
 .button-item a.animate {
-  animation: typewriter 2s steps(20, end) forwards;
-  border-right: none; /* Eliminamos la línea del cursor al final */
+    animation: typewriter 2s steps(20, end) forwards;
+    border-right: none;
 }
 
 .button-item:hover {
-  background-color: #333;
+    background-color: #333;
 }
 
 @keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: white; }
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
 }
 
-
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-out forwards;
-  animation-delay: 2s; /* ⏳ Cambia este valor para más demora */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 2s;
 }
 
 @keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* --- Media Queries para Responsividad --- */
+
+/* Tablet Grande / Laptop (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .main-section {
+        /* Permite que las columnas se apilen una debajo de la otra en tabletas si no hay espacio */
+        flex-direction: column;
+        max-width: 90%; /* Ocupa más ancho en tabletas */
+    }
+
+    .image-text-container {
+        flex: auto; /* Ocupa el ancho completo cuando se apila */
+        height: 600px; /* Reduce un poco la altura en tablet */
+        min-width: unset; /* Permite que se encoja más */
+    }
+
+    .text-container {
+        padding: 2rem; /* Reduce padding */
+    }
+
+    .text-container h1 {
+        font-size: 4.5rem; /* Reduce el tamaño del título */
+    }
+
+    .text-container p {
+        font-size: 1.1rem; /* Reduce el tamaño del párrafo */
+    }
+
+    .right-container {
+        flex: auto; /* Ocupa el ancho completo cuando se apila */
+        height: auto; /* Altura automática */
+        min-width: unset; /* Permite que se encoja más */
+        margin-top: 5px; /* Añade un pequeño margen superior cuando se apila */
+    }
+
+    .right-images {
+        flex: none; /* No usa flex para altura, usa altura fija o automática */
+        height: 400px !important; /* Altura fija para las imágenes de la derecha */
+        margin-bottom: 5px; /* Espacio entre imágenes y descripción */
+    }
+
+    .description {
+        flex: none; /* No usa flex para altura */
+        padding: 30px; /* Ajusta padding */
+    }
+
+    .button-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para los botones en tablet */
+        max-width: 90%; /* Ajusta el ancho para que coincida con main-section */
+    }
+}
+
+/* Tablet Pequeña / Móvil Horizontal (max-width: 768px) */
+@media (max-width: 768px) {
+    .welcome {
+        padding: 15px;
+    }
+
+    .main-section {
+        max-width: 95%; /* Más ancho para aprovechar el espacio */
+    }
+
+    .image-text-container {
+        height: 500px; /* Reduce aún más la altura */
+    }
+
+    .text-container {
+        padding: 1.5rem;
+    }
+
+    .text-container h1 {
+        font-size: 3.5rem; /* Tamaño de fuente más pequeño */
+    }
+
+    .text-container p {
+        font-size: 1rem;
+    }
+
+    .right-images {
+        height: 300px; /* Reduce la altura de las imágenes de la derecha */
+    }
+
+    .description {
+        padding: 20px;
+    }
+
+    .description p {
+        font-size: 13px; /* Tamaño de fuente más pequeño */
+    }
+
+    .button-section {
+        grid-template-columns: 1fr; /* Una columna para los botones en móviles */
+        max-width: 95%; /* Ajusta el ancho */
+    }
+
+    .button-item {
+        padding: 20px; /* Reduce padding de los botones */
+    }
+}
+
+/* Móvil Vertical (max-width: 480px) */
+@media (max-width: 480px) {
+    .welcome {
+        padding: 10px;
+    }
+
+    .main-section {
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    .image-text-container {
+        height: 400px; /* Altura para móviles */
+    }
+
+    .text-container {
+        padding: 1rem;
+    }
+
+    .text-container h1 {
+        font-size: 2.5rem; /* Tamaño de fuente para móviles */
+    }
+
+    .text-container p {
+        font-size: 0.9rem;
+    }
+
+    .right-images {
+        height: 250px; /* Altura más pequeña para las imágenes de la derecha */
+        flex-direction: column; /* Apila las dos imágenes de la derecha */
+    }
+
+    .image {
+        height: 120px; /* Altura individual de las imágenes apiladas */
+        width: 100%; /* Ocupa todo el ancho cuando se apilan */
+    }
+
+    .description {
+        padding: 15px;
+    }
+
+    .description p {
+        font-size: 12px;
+    }
+
+    .button-item {
+        padding: 15px;
+    }
 }

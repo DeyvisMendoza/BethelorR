@@ -13,25 +13,25 @@ const services = [
         image: "public/services/service1.png",
         icons: [
             {
-                icon: "public/icons/icon-herramienta.png",
+                icon: "public/services/icon-herramienta.png",
                 title: "CUSTOM CABINETS",
                 desc:
                     "Built-in storage solutions crafted to fit your kitchen style, improve organization, and maximize space.",
             },
             {
-                icon: "public/icons/icon-counter.png",
+                icon: "public/services/icon-counter.png",
                 title: "COUNTERTOPS INSTALLATION",
                 desc:
                     "Precision installation of granite, quartz, or laminate countertops for durability, beauty, and daily use.",
             },
             {
-                icon: "public/icons/icon-focus.png",
+                icon: "public/services/icon-focus.png",
                 title: "LIGHTING UPGRADES",
                 desc:
                     "Install modern lighting fixtures, including recessed lights, pendants, and under-cabinet options, for better visibility and ambiance.",
             },
             {
-                icon: "public/icons/icon-open.png",
+                icon: "public/services/icon-open.png",
                 title: "OPEN LAYOUT CONVERSION",
                 desc:
                     "Remove walls or barriers to create a more open kitchen space. Improve flow, visibility, and modernize your layout for better interaction and comfort.",
@@ -48,25 +48,25 @@ const services = [
         image: "public/services/service2.png",
         icons: [
             {
-                icon: "public/icons/icon-herramienta.png",
+                icon: "public/services/icon-herramienta.png",
                 title: "VANITY AND SINK REPLACEMENT",
                 desc:
                     "Upgrade your bathroom with elegant vanities and functional sinks — designed for comfort and storage.",
             },
             {
-                icon: "public/icons/icon-counter.png",
+                icon: "public/services/icon-counter.png",
                 title: "SHOWER AND BATHTUB INSTALLATION",
                 desc:
                     "Install sleek walk-in showers or luxurious tubs for a fresh, spa-like experience.",
             },
             {
-                icon: "public/icons/icon-open.png",
+                icon: "public/services/icon-open.png",
                 title: "CUSTOM TILE WORK",
                 desc:
                     "Modern tile for floors, walls, and showers — precision-installed for style and durability.",
             },
             {
-                icon: "public/icons/icon-focus.png",
+                icon: "public/services/icon-focus.png",
                 title: "LIGHTING UPGRADES",
                 desc:
                     "Improve your bathroom’s ambiance and visibility with updated fixtures and vanity lighting.",
@@ -85,25 +85,25 @@ const services = [
         image: "public/services/service3.png",
         icons: [
             {
-                icon: "public/icons/icon-herramienta.png",
+                icon: "public/services/icon-herramienta.png",
                 title: "CUSTOM BASEMENT DESIGN",
                 desc:
                     "Tailored layouts that match your needs—whether it’s a home theater, playroom, bar area, or extra living space.",
             },
             {
-                icon: "public/icons/icon-counter.png",
+                icon: "public/services/icon-counter.png",
                 title: "FRAMING & DRYWALL FINISHING",
                 desc:
                     "Expert framing and seamless drywall installation that give your basement a clean, polished look ready for paint and fixtures.",
             },
             {
-                icon: "public/icons/icon-focus.png",
+                icon: "public/services/icon-focus.png",
                 title: "LIGHTING & ELECTRICAL UPGRADES",
                 desc:
                     "Modern lighting solutions including recessed lights, wall sconces, and safe electrical wiring—bringing comfort, ambiance, and efficiency.",
             },
             {
-                icon: "public/icons/icon-open.png",
+                icon: "public/services/icon-open.png",
                 title: "OPEN LAYOUT CONVERSION",
                 desc:
                     "Remove barriers or walls to create spacious, open-concept basements that improve flow, visibility, and family interaction.",
@@ -122,25 +122,25 @@ const services = [
         image: "public/services/service4.png",
         icons: [
             {
-                icon: "public/icons/icon-herramienta.png",
+                icon: "public/services/icon-herramienta.png",
                 title: "INTERIOR LAYOUT REMODELING",
                 desc:
                     "Open up spaces or redesign your home’s layout to improve flow, light, and daily functionality.",
             },
             {
-                icon: "public/icons/icon-counter.png",
+                icon: "public/services/icon-counter.png",
                 title: "FLOORING, DRYWALL & PAINTING",
                 desc:
                     "We install premium flooring, smooth drywall finishes, and custom paint for a clean, modern look.",
             },
             {
-                icon: "public/icons/icon-open.png",
+                icon: "public/services/icon-open.png",
                 title: "KITCHEN & BATHROOM REMODELING",
                 desc:
                     "Upgrade essential spaces with new tile, cabinetry, vanities, countertops, lighting, and plumbing fixtures.",
             },
             {
-                icon: "public/icons/icon-focus.png",
+                icon: "public/services/icon-focus.png",
                 title: "LIGHTING & ELECTRICAL ENHANCEMENTS",
                 desc:
                     "Improve safety and ambiance with updated electrical work and smart lighting solutions.",
@@ -157,25 +157,25 @@ const services = [
         image: "public/services/service5.png",
         icons: [
             {
-                icon: "public/icons/icon-herramienta.png",
+                icon: "public/services/icon-herramienta.png",
                 title: "INTERIOR LAYOUT REMODELING",
                 desc:
                     "Open up spaces or redesign your home’s layout to improve flow, light, and daily functionality.",
             },
             {
-                icon: "public/icons/icon-counter.png",
+                icon: "public/services/icon-counter.png",
                 title: "FLOORING, DRYWALL & PAINTING",
                 desc:
                     "We install premium flooring, smooth drywall finishes, and custom paint for a clean, modern look.",
             },
             {
-                icon: "public/icons/icon-open.png",
+                icon: "public/services/icon-open.png",
                 title: "KITCHEN & BATHROOM REMODELING",
                 desc:
                     "Upgrade essential spaces with new tile, cabinetry, vanities, countertops, lighting, and plumbing fixtures.",
             },
             {
-                icon: "public/icons/icon-focus.png",
+                icon: "public/services/icon-focus.png",
                 title: "LIGHTING & ELECTRICAL ENHANCEMENTS",
                 desc:
                     "Improve safety and ambiance with updated electrical work and smart lighting solutions.",
@@ -192,25 +192,25 @@ const services = [
         image: "public/services/service6.png",
         icons: [
             {
-                icon: "public/icons/icon-herramienta.png",
+                icon: "public/services/icon-herramienta.png",
                 title: "INTERIOR WALL & CEILING PAINTING",
                 desc:
                     "Smooth, even finishes on walls and ceilings using high-quality paint and clean edge detailing.",
             },
             {
-                icon: "public/icons/icon-counter.png",
+                icon: "public/services/icon-counter.png",
                 title: "EXTERIOR FACADE & TRIM PAINTING",
                 desc:
                     "Protect and refresh your home’s exterior with weather-resistant paint for siding, trim, shutters, and doors.",
             },
             {
-                icon: "public/icons/icon-focus.png",
+                icon: "public/services/icon-focus.png",
                 title: "DRYAWALL PATCHING & PREP WORK",
                 desc:
                     "We fix cracks, holes, and surface imperfections before painting — for a flawless, long-lasting result.",
             },
             {
-                icon: "public/icons/icon-herramienta-doble.png",
+                icon: "public/services/icon-herramienta-doble.png",
                 title: "COLOR MATCHING & CONSULTATION",
                 desc:
                     "Get expert help choosing the right colors and finishes to match your style and enhance your space.",
@@ -227,25 +227,25 @@ const services = [
         image: "public/services/service7.png",
         icons: [
             {
-                icon: "public/icons/icon-herramienta.png",
+                icon: "public/services/icon-herramienta.png",
                 title: "HARDWOOD & ENGINEERED WOOD",
                 desc:
                     "Built-in storage solutions crafted to fit your kitchen style, improve organization, and maximize space.",
             },
             {
-                icon: "public/icons/icon-counter.png",
+                icon: "public/services/icon-counter.png",
                 title: "LUXURY VINYL PLANK (LVP) & LAMINATE",
                 desc:
                     "Affordable, waterproof options with stylish looks and low maintenance.",
             },
             {
-                icon: "public/icons/icon-herramienta-doble.png",
+                icon: "public/services/icon-herramienta-doble.png",
                 title: "TILE FLOORING",
                 desc:
                     "Ideal for kitchens, bathrooms, and basements — resistant and easy to clean.",
             },
             {
-                icon: "public/icons/icon-open.png",
+                icon: "public/services/icon-open.png",
                 title: "SUBFLOOR PREP & LEVELING",
                 desc:
                     "We prep surfaces to ensure a smooth, long-lasting floor installation.",
@@ -262,25 +262,25 @@ const services = [
         image: "public/services/service8.png",
         icons: [
             {
-                icon: "public/icons/icon-herramienta.png",
+                icon: "public/services/icon-herramienta.png",
                 title: "WINDOW REPLACEMENT & INSTALLATION",
                 desc:
                     "Energy-efficient windows installed with precision for better insulation and natural light.",
             },
             {
-                icon: "public/icons/icon-counter.png",
+                icon: "public/services/icon-counter.png",
                 title: "EXTERIOR & ENTRY DOOR REPLACEMENT",
                 desc:
                     "Secure, stylish front and back doors that boost curb appeal and safety.",
             },
             {
-                icon: "public/icons/icon-focus.png",
+                icon: "public/services/icon-focus.png",
                 title: "SLIDING & PATIO DOORS",
                 desc:
                     "Smooth-gliding doors that connect indoor and outdoor living spaces beautifully.",
             },
             {
-                icon: "public/icons/icon-herramienta-doble.png",
+                icon: "public/services/icon-herramienta-doble.png",
                 title: "FRAMING, SEALING & TRIM WORK",
                 desc:
                     "Complete installations with framing, caulking, and detailed interior/exterior finishes.",
@@ -297,25 +297,25 @@ const services = [
         image: "public/services/service9.png",
         icons: [
             {
-                icon: "public/icons/icon-herramienta.png",
+                icon: "public/services/icon-herramienta.png",
                 title: "CUSTOM WOOD & COMPOSITE DECKS",
                 desc:
                     "Built to last using premium materials like pressure-treated wood, cedar, or composite.",
             },
             {
-                icon: "public/icons/icon-counter.png",
+                icon: "public/services/icon-counter.png",
                 title: "PAVER PATIOS & WALKWAYS",
                 desc:
                     "Stylish and functional patios built with stone, brick, or concrete pavers.",
             },
             {
-                icon: "public/icons/icon-herramienta-doble.png",
+                icon: "public/services/icon-herramienta-doble.png",
                 title: "COVERED DECKS & PERGOLAS",
                 desc:
                     "Enjoy shade and protection with custom structures for year-round use.",
             },
             {
-                icon: "public/icons/icon-open.png",
+                icon: "public/services/icon-open.png",
                 title: "PERMIT & FINAL FINISHING",
                 desc:
                     "We take care of permits, sealing, staining, and everything in between.",
@@ -332,25 +332,25 @@ const services = [
         image: "public/services/service10.png",
         icons: [
             {
-                icon: "public/icons/icon-herramienta.png",
+                icon: "public/services/icon-herramienta.png",
                 title: "DRYWALL REPAIR & TOUCH-UPS",
                 desc:
                     "We fix cracks, dents, holes, and more — leaving your walls ready for paint.",
             },
             {
-                icon: "public/icons/icon-counter.png",
+                icon: "public/services/icon-counter.png",
                 title: "DOOR, TRIM & HARDWARE REPAIR",
                 desc:
                     "We adjust, repair or replace doors, handles, locks, and moldings.",
             },
             {
-                icon: "public/icons/icon-focus.png",
+                icon: "public/services/icon-focus.png",
                 title: "MINOR ELECTRICAL & PLUMBING FIXES",
                 desc:
                     "Small leak? Light not working? We handle basic issues quickly and safely.",
             },
             {
-                icon: "public/icons/icon-herramienta-doble.png",
+                icon: "public/services/icon-herramienta-doble.png",
                 title: "CAULKING, PATCHING & GENERAL MAINTENANCE",
                 desc:
                     "Sealing, smoothing, and restoring problem areas throughout your home.",

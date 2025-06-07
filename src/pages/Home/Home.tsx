@@ -15,18 +15,18 @@ import { Welcome } from "./Welcome";
 export const Home = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Welcome />
       <Services />
-      <Projects />
-      <About />
-      <Choose />
-      <Brands />
-      <Process />
-      <Testimonials />
-      <Tips />
-      <Form />
-      <Footer />
+      {/* <Projects /> */}
+      {/* <About /> */}
+      {/* <Choose /> */}
+      {/* <Brands /> */}
+      {/* <Process /> */}
+      {/* <Testimonials /> */}
+      {/* <Tips /> */}
+      {/* <Form /> */}
+      {/* <Footer /> */}
     </>
   );
 };
