@@ -10,7 +10,7 @@ export const Welcome = () => {
             style={{ backgroundImage: "url('/public/welcome/welcome-fondo1.png')" }}
           ></div>
           <div className="text-container">
-            <h1>Home Remodeling in Maryland</h1>
+            <h1>Home Remodeling in Maryland 2025</h1>
             <p>
               Kitchens, bathrooms, basements & more.
               <br />
